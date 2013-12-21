@@ -2,15 +2,15 @@ module HafezWeb
   class MainApp < Sinatra::Base
     
     get '/' do
-      haml :index
-    end
-    
-    get '/gallery' do
-      haml :gallery
+      haml :main
     end
     
     get '/contact' do
       haml :contact
+    end
+    
+    get '/about' do
+      haml :about
     end
     
   end  

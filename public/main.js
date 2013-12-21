@@ -9,4 +9,7 @@ $(document).ready(function(){
 	$(".google-map").fancybox({
 		'type':'iframe'		
 	});	
+	$("#a-history").click(function(){		
+		$("#history").prop('hidden',false);		
+	});	
 });

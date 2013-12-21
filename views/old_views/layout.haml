@@ -1,0 +1,40 @@
+!!!
+%html
+  #wrapper  
+    #header
+      %head
+        %title Dealership Name Here      
+        // Add jquery library
+        %script{:type=>"text/javascript", :src=>"http://code.jquery.com/jquery-latest.min.js"}
+        // Fancybox
+        %link{:rel=>"stylesheet", :href=>"/public/fancybox/source/jquery.fancybox.css?v=2.1.5", :type=>"text/css", :media=>"screen"}    
+        %script{:type=>"text/javascript", :src=>"/public/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"}
+        // local asset            
+        %script{:type=>"text/javascript", :src=>"/public/main.js"}           
+        %link{:rel=>'stylesheet', :href=>"public/styles.css"}
+               
+        %h1 Welcome to My Dealer's website         
+        %ul
+          %li
+            %a{:href=>"/"} Main Page
+          %li
+            %a{:href=>"/gallery"} Picture Gallery
+          %li
+            %a{:href=>"/contact"} Contact Us                  
+    #body           
+      %body
+        %container        
+          =yield
+    #footer
+      %ul
+        %li                
+          WEBMASTER : Ray Renaldi @Copyright 2013
+          %br
+          %a{href: "mailto:renaldi.sim@gmail.com"} Email
+                        
+          
+             
+    
+    
+        
+  
