@@ -1,0 +1,22 @@
+#leftPan  
+  %span.headline
+    %b
+      Pictures
+  %hr{width: '150%'}      
+  - @images.each do |i|    
+    %a{class: 'fancybox',rel: 'inventory', href: "#{i}"}
+      %img{src: "#{i}", width: '300', height: '168'}
+#centerPan
+#rightPan
+  %span.headline
+    Specifications
+  %hr{width: '100%'}      
+  %p Make: Ford
+  %p Model: F150
+  %p Year: 2001
+  %p Mileage: 100000
+  %p Engine: 6 liter  
+  %p Transmission: Automatic
+  %p More specification here...    
+           
+    

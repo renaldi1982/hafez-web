@@ -1,5 +1,0 @@
-#leftPan
-
-#centerPain
-
-#rightPain

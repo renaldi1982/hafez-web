@@ -5,6 +5,8 @@ ul{list-style-type:none;}
 
 .clear {clear: both; margin: 0px; height:0}
 
+p{font:13px/18px Tahoma, sans-serif}
+
 p a{font:10px/14px Tahoma, sans-serif; color:#0beef6; text-decoration:underline;}
 p a:hover{ color:#fff; text-decoration:none;}
 
@@ -12,7 +14,7 @@ p a.a2{font:10px/14px Tahoma, sans-serif; color:#fff; text-decoration:none;}
 p a.a2:hover{ color:#fff; text-decoration:underline;}
 
 .headline{font:18px/14px "Trebuchet MS", Arial, Helvetica, sans-serif; color:#FFF; font-weight:bold}
-.headline2{font:12px/14px Tahoma, Geneva, sans-serif; color:#0beef6; font-weight:bold}
+.headline2{font:18px/14px Tahoma, Geneva, sans-serif; color:#0beef6; font-weight:bold}
 
 #container{width:775px; position:relative; margin:0 auto; background:#2a2a2a}
 
@@ -23,7 +25,7 @@ p a.a2:hover{ color:#fff; text-decoration:underline;}
 #header img#logo{position:absolute; top:9px; left:510px}
 #header img#slogan{position:absolute; top:186px; left:408px}
 
-#header ul.menu{position:absolute; top:16px; left:8px; width:470px}
+#header ul.menu{position:absolute; top:16px; left:8px; width:480px}
 #header ul.menu li{height:17px; margin-right:13px; float:left}
 #header ul.menu li a{height:17px; display:block; text-indent:-20000px; }
 #header ul.menu li a:hover{height:17px;}
@@ -34,10 +36,10 @@ p a.a2:hover{ color:#fff; text-decoration:underline;}
 #header ul.menu li.btn_2 a{width:61px; background:url(../images/btn_2.gif) 0 0 no-repeat; }
 #header ul.menu li.btn_2 a:hover{width:61px; background:url(../images/btn_2_over.gif) 0 0 no-repeat;}
 
-#header ul.menu li.btn_3 a{width:61px; background:url(../images/btn_3.gif) 0 0 no-repeat; }
+#header ul.menu li.btn_3 a{width:75px; background:url(../images/btn_3.gif) 0 0 no-repeat; }
 #header ul.menu li.btn_3 a:hover{width:61px; background:url(../images/btn_3_over.gif) 0 0 no-repeat;}
 
-#header ul.menu li.btn_4 a{width:66px; background:url(../images/btn_4.gif) 0 0 no-repeat; }
+#header ul.menu li.btn_4 a{width:70px; background:url(../images/btn_4.gif) 0 0 no-repeat; }
 #header ul.menu li.btn_4 a:hover{width:66px; background:url(../images/btn_4_over.gif) 0 0 no-repeat;}
 
 #header ul.menu li.btn_5{margin-right:0}
