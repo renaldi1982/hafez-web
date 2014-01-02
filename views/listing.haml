@@ -1,16 +1,13 @@
-#leftPan  
-  %p= @dir.count if @dir.is_a?(Array)  
-  - @dir.each do |b|
-    %p= b
+#leftPan    
   %span.headline
     %b= !@dir.nil? ? "Cars on lot"  : "There's no car in the lot"
   %hr    
   - if !@dir.nil?    
     - @dir.each do |d|
       %p      
-        %a.a2{href: "/#{d[/\.\/[\S]+\/[\S]+\/[\S]+\/([\S]+)\//ix,1]}"}= d[/\.\/[\S]+\/[\S]+\/[\S]+\/([\S]+)\//ix,1]
+        %a.a2{href: "/#{d[/.*\/([\S]+)/ix,1]}"}= d[/.*\/([\S]+)/ix,1]
   - else
-    %p= "Empty"                    
+    %p= "Directory is empty"                    
 #centerPan
 
 #rightPan
