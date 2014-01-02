@@ -1,6 +1,6 @@
 # GOES TO CONFIGURATION
 # to get the vehicle type without the directory
-# d[/.*\/([\S]+)/ix,1]
+# d[/.*\/([\w]+)/ix,1]
 
 module HafezWeb
   class MainApp < Sinatra::Base        

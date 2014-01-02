@@ -5,7 +5,7 @@
   - if !@dir.nil?    
     - @dir.each do |d|
       %p      
-        %a.a2{href: "/#{d[/.*\/([\S]+)/ix,1]}"}= d[/.*\/([\S]+)/ix,1]
+        %a.a2{href: "/#{d[/.*\/([\w]+)/ix,1]}"}= d[/.*\/([\w]+)/ix,1]
   - else
     %p= "Directory is empty"                    
 #centerPan
