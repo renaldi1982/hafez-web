@@ -5,10 +5,7 @@ module HafezWeb
     register Sinatra::Flash
     register Sinatra::Reloader
     helpers Sinatra::RedirectWithFlash    
-    #helpers Sinatra::JSON           
-    
-    #set base directory path for daemon use
-    @base_dir_path = Dir.pwd + 'home/rey/hafez-web/public/images/inventory/'
+    #helpers Sinatra::JSON                   
     
     #set path for layout and views
     set :haml, :layout => :'layout'
