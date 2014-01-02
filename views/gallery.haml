@@ -1,11 +1,13 @@
 #leftPan    
-  %img{src: "../public/images/inventory/trucks/DSC07283.JPG", width: '300', height: '168'}    
+  %img{src: "../public/images/inventory/trucks/DSC07283.JPG", width: '300', height: '168'}
+      
   %span.headline
     %b
       Pictures
   %hr{width: '150%'}    
   %p (Click image to see bigger picture)  
   - @images.each do |i|    	
+    %p= i
     %a{class: 'fancybox',rel: 'inventory', href: "#{i}"}
       %img{src: "#{i}", width: '300', height: '168'}
   %hr{width: '150%'}  
