@@ -13,7 +13,11 @@ module HafezWeb
     #set path for layout and views
     set :haml, :layout => :'layout'
     set :views, Proc.new { File.join(root, "../views") }        
-                      
+    
+    def initiliaze
+      @base_dir_path = Dir.pwd + 'home/rey/hafez-web/public/images/inventory/'
+    end
+                          
     def get_dir 
       if Dir.pwd == '/'
         # get working working directory          
