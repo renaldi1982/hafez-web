@@ -1,6 +1,6 @@
 #leftPan    
   %img{src: "/home/rey/hafez-web/public/images/inventory/trucks/DSC07283.JPG", width: '300', height: '168'}
-  %p= "Route is: #{'..'+Dir.pwd+'*.*'}"
+  %p= "Route is: #{Dir['..'+Dir.pwd+'*.*']}"
   %span.headline
     %b
       Pictures
