@@ -1,5 +1,6 @@
 #leftPan
-  %p= @work_dir
+  %p= @dir.count
+  %p= @dir.class 
   %span.headline
     %b= !@dir.nil? ? "Cars on lot"  : "There's no car in the lot"
   %hr    
