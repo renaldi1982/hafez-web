@@ -14,22 +14,26 @@ module HafezWeb
     helpers do       
             
       def get_dir 
-        # get working working directory
-        base_dir_path = Dir.pwd + 'home/rey/hafez-web/public/images/inventory/'
-        dir = Dir[base_dir_path + '*/']
-        # get all folders for listing (localhost)
-        #dirs = Dir[work_dir + './public/images/inventory/' + '*/']                           
+        if Dir.pwd == '/'
+          # get working working directory
+          @base_dir_path = Dir.pwd + 'home/rey/hafez-web/public/images/inventory/'
+          dir = Dir[@base_dir_path + '*/']
+        else
+          # get all folders for listing (localhost)
+          dir = Dir['./public/images/inventory/' + '*/']
+        end                                          
       end
                
-      def get_images(type)                
+      def get_images(type)  
+        @base_image_path = @base_dir_path + type             
         # go through each file in the type vehicle folder and modified the file extension to uppercase
-        Dir['/home/rey/hafez-web/public/images/inventory/' + type + '/*.*'].each do |f|
+        Dir[@base_image_path + '/*.*'].each do |f|
           # check if all files have extension .JPG
           if File.extname(f) != ".JPG"
             FileUtils.mv f, "#{File.dirname(f)}/#{File.basename(f,'.*')}.JPG"
           end          
         end
-        images = Dir['./public/images/inventory/' + type + '/*.JPG']          
+        images = Dir[@base_image_path + '/*.JPG']          
       end
             
     end
