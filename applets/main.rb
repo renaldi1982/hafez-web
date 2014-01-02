@@ -11,14 +11,14 @@ module HafezWeb
     set :haml, :layout => :'layout'
     set :views, Proc.new { File.join(root, "../views") }        
     
-    def initiliaze
-      @base_dir_path = Dir.pwd + 'home/rey/hafez-web/public/images/inventory/'
+    def base_path
+      Dir.pwd + 'home/rey/hafez-web/public/images/inventory/'      
     end
                           
-    def get_dir 
+    def get_dir            
       if Dir.pwd == '/'
         # get working working directory          
-        dir = Dir[@base_dir_path + '*/']
+        dir = Dir[base_path + '*/']         
       else
         # get all folders for listing (localhost)
         dir = Dir['./public/images/inventory/' + '*/']
@@ -26,7 +26,7 @@ module HafezWeb
     end
              
     def get_images(type)  
-      @base_image_path = @base_dir_path + type             
+      base_image_path = base_path + type             
       # go through each file in the type vehicle folder and modified the file extension to uppercase
       Dir[@base_image_path + '/*.*'].each do |f|
         # check if all files have extension .JPG
