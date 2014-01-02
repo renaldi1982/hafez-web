@@ -19,7 +19,8 @@ module HafezWeb
     
     get '/listing' do
       # get listing folders
-      @dir = get_dir                        
+      @work_dir = get_dir 
+      #@dir = get_dir                        
       haml :listing
     end
     
