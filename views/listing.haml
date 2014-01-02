@@ -1,5 +1,5 @@
-#leftPan
-  %p= @dir.class  
+#leftPan  
+  %p= @dir.count if @dir.is_a?(Array)  
   %span.headline
     %b= !@dir.nil? ? "Cars on lot"  : "There's no car in the lot"
   %hr    
