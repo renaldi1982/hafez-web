@@ -15,7 +15,7 @@ module HafezWeb
             
       def get_dir 
         # get working working directory
-        dir = Dir[Dir.pwd + 'home/rey/hafez-web/public/' + '*/']
+        dir = Dir[Dir.pwd + 'home/rey/hafez-web/public/images/inventory/' + '*/']
         # get all folders for listing (localhost)
         #dirs = Dir[work_dir + './public/images/inventory/' + '*/']                           
       end
