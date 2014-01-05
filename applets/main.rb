@@ -32,13 +32,13 @@ module HafezWeb
     def get_images(type)              
       if Dir.pwd == '/'
         # go through each file in the type vehicle folder and modified the file extension to uppercase
-        Dir[base_path + type +'*.*'].each do |f|
-          # check if all files have extension .JPG
+        Dir[image_path + type +'*.*'].each do |f|
+          # check if all files have extension .JPG if not then remove the files
           if File.extname(f) != ".JPG"
             FileUtils.mv f, "#{File.dirname(f)}/#{File.basename(f,'.*')}.JPG"
           end          
         end        
-        images = Dir[base_path + type + '/*.JPG']
+        images = Dir[image_path + type + '/*.JPG']
       else
         images = Dir['./public/images/inventory/' + type + '/*.JPG']        
       end
