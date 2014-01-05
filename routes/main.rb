@@ -24,7 +24,8 @@ module HafezWeb
     end
     
     get '/:id' do
-      type = params.id            
+      @type = params.id    
+              
       @images = get_images(type)            
       haml :gallery
     end
