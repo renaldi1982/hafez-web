@@ -1,11 +1,10 @@
-#leftPan       
+#leftPan          
   %span.headline
     %b
       Pictures
   %hr{width: '150%'}    
   %p (Click image to see bigger picture)  
-  - @images.each do |i|    	     
-    %p= "#{Dir.pwd == '/' ? i[/.+\/hafez-web(.+)/ix,1] : i}"   
+  - @images.each do |i|           
     %a{class: 'fancybox',rel: 'inventory', href: "#{Dir.pwd == '/' ? i[/.+\/hafez-web(.+)/ix,1] : i}"}
       %img{src: "#{Dir.pwd == '/' ? i[/.+\/hafez-web(.+)/ix,1] : i}", width: '300', height: '168'}
   %hr{width: '150%'}  

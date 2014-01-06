@@ -23,11 +23,14 @@ module HafezWeb
       haml :listing
     end
     
-    get '/:id' do
-      type = params.id    
-              
-      @images = get_images(type)            
-      haml :gallery
+    get '/:type' do
+      type = params.type
+      
+      #make sure all image files have extension .JPG   
+      file_ext_check(type)      
+      @images = get_images(type)                                                                          
+                              
+      haml :gallery      
     end
     
   end  

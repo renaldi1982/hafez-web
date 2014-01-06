@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(function(){			
 	$(".fancybox").fancybox({
 		beforeShow : function() {
 			var alt = this.element.find('img').attr('alt');
@@ -21,5 +21,5 @@ $(document).ready(function(){
 		$("#history").prop('hidden',true);
 		$("#a-history").prop('hidden',false);
 		$("#a-history-hide").prop('hidden',true);
-	});
+	});		
 });
